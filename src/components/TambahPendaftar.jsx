@@ -20,7 +20,6 @@ const TambahPendaftar = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    // Inject style tag saat komponen dimuat
     const style = document.createElement("style");
     style.textContent = `
       .form-control, .form-select {

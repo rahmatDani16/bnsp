@@ -36,7 +36,6 @@ const PendaftarList = () => {
 
   return (
     <div className="container mt-5">
-      {/* Inline CSS untuk efek lembut */}
       <style>
         {`
           .table-row-inactive {
@@ -61,7 +60,7 @@ const PendaftarList = () => {
           Daftar Pendaftar
         </h2>
         <Link to="/pendaftar/tambah" className="btn btn-warning fw-bold shadow-sm">
-          + Tambah
+           Tambah
         </Link>
       </div>
 

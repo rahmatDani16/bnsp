@@ -1,19 +1,17 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card} from "react-bootstrap";
 import MyNavbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaQuoteLeft } from "react-icons/fa";
 
 const HomeBNSP = () => {
   return (
-    <div style={{ backgroundColor: "#f0f4f8" }}>
+    <div style={{ backgroundColor: "#f8f9fb" }}>
       <MyNavbar />
-
-      {/* Hero Section */}
       <section
         className="text-white d-flex align-items-center"
         style={{
-          background: "linear-gradient(135deg, #001f3f, #005f73)",
+          background: "linear-gradient(135deg, #001f3f, #00b4d8)",
           padding: "100px 5%",
           minHeight: "100vh",
         }}
@@ -28,7 +26,7 @@ const HomeBNSP = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                Bangun Karier Profesional Anda Bersama <span style={{ color: "#00d084" }}>BNSP</span>
+                Bangun Karier Profesional Anda Bersama <span style={{ color: "#38b000" }}>BNSP</span>
               </motion.h1>
               <motion.p
                 style={{ fontSize: "18px", lineHeight: "1.7" }}
@@ -36,17 +34,8 @@ const HomeBNSP = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
               >
-                Raih pengakuan kompetensi dengan sertifikat resmi dari Badan Nasional Sertifikasi Profesi. Buka pintu kesempatan kerja yang lebih luas!
+                Raih pengakuan resmi dengan sertifikat kompetensi dari BNSP. Tingkatkan kredibilitas dan daya saing Anda di dunia kerja!
               </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5 }}
-              >
-                <Button variant="light" className="mt-4 px-4 py-2 fw-bold rounded-pill">
-                  Daftar Sekarang
-                </Button>
-              </motion.div>
             </Col>
             <Col md={6} className="text-center">
               <motion.img
@@ -61,13 +50,11 @@ const HomeBNSP = () => {
           </Row>
         </Container>
       </section>
-
-      {/* Keunggulan */}
       <section style={{ padding: "80px 5%" }}>
         <Container>
           <Row className="text-center mb-5">
             <Col>
-              <motion.h2 className="fw-bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <motion.h2 className="fw-bold text-dark" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 Kenapa Sertifikasi BNSP Penting?
               </motion.h2>
               <p className="text-muted fs-5 mt-3">
@@ -95,26 +82,25 @@ const HomeBNSP = () => {
                   "Peluang lebih luas untuk promosi dan jenjang karier"
                 ].map((item, idx) => (
                   <li key={idx} className="mb-2">
-                    <FaCheckCircle color="#00d084" className="me-2" />
+                    <FaCheckCircle color="#38b000" className="me-2" />
                     {item}
                   </li>
                 ))}
-              </ul>
+                           </ul>
             </Col>
           </Row>
         </Container>
       </section>
 
-      {/* Tentang BNSP */}
       <section style={{ backgroundColor: "#ffffff", padding: "80px 5%" }}>
         <Container>
           <Row className="text-center mb-5">
             <Col>
-              <motion.h2 className="fw-bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <motion.h2 className="fw-bold text-dark" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 Tentang BNSP
               </motion.h2>
               <p className="text-muted fs-5 mt-3">
-                BNSP adalah badan independen yang melaksanakan sertifikasi kompetensi kerja sesuai dengan undang-undang.
+                BNSP adalah lembaga independen yang menyelenggarakan sertifikasi kompetensi kerja sesuai dengan UU No. 13 Tahun 2003.
               </p>
             </Col>
           </Row>
@@ -133,15 +119,14 @@ const HomeBNSP = () => {
         </Container>
       </section>
 
-      {/* Mitra LSP */}
-      <section style={{ backgroundColor: "#f8fafc", padding: "80px 5%" }}>
+      <section style={{ backgroundColor: "#f1f5f9", padding: "80px 5%" }}>
         <Container>
           <Row className="text-center mb-5">
             <Col>
-              <motion.h2 className="fw-bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <motion.h2 className="fw-bold text-dark" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 Mitra Lembaga Sertifikasi Profesi (LSP)
               </motion.h2>
-              <p className="text-muted">Berikut adalah beberapa LSP yang bekerja sama dengan BNSP:</p>
+              <p className="text-muted">Berikut beberapa mitra resmi LSP yang telah bekerja sama dengan BNSP:</p>
             </Col>
           </Row>
           <Row className="g-4 justify-content-center">
@@ -174,12 +159,54 @@ const HomeBNSP = () => {
         </Container>
       </section>
 
+      <section style={{ backgroundColor: "#ffffff", padding: "80px 5%" }}>
+        <Container>
+          <Row className="text-center mb-5">
+            <Col>
+              <motion.h2 className="fw-bold text-dark" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                Apa Kata Mereka?
+              </motion.h2>
+              <p className="text-muted">Pengalaman peserta sertifikasi bersama BNSP</p>
+            </Col>
+          </Row>
+          <Row className="g-4">
+            {[
+              {
+                nama: "Andi Saputra",
+                isi: "Sertifikasi BNSP membantu saya mendapatkan promosi di tempat kerja. Prosesnya jelas dan profesional.",
+              },
+              {
+                nama: "Ratna Dewi",
+                isi: "Saya lebih percaya diri melamar pekerjaan dengan sertifikat dari BNSP. Terima kasih!",
+              },
+              {
+                nama: "Fajar Pratama",
+                isi: "Langkah besar untuk karier saya. Sertifikat ini menjadi bukti nyata kompetensi saya.",
+              },
+            ].map((testi, idx) => (
+              <Col md={4} key={idx}>
+                <motion.div
+                  className="p-4 shadow rounded bg-light h-100"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.3 }}
+                >
+                  <FaQuoteLeft size={30} className="mb-3 text-primary" />
+                  <p className="fst-italic">{testi.isi}</p>
+                  <h6 className="fw-bold mt-3">{testi.nama}</h6>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
       <Footer />
 
       <style>{`
         .glass-card {
           backdrop-filter: blur(10px);
-          background-color: rgba(255, 255, 255, 0.85);
+          background-color: rgba(255, 255, 255, 0.9);
           border-radius: 1rem;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }

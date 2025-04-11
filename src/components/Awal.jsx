@@ -157,8 +157,6 @@ const Dashboard = () => {
             )}
           </div>
         </div>
-
-        {/* CSS dijadikan satu */}
         <style>{`
           .dashboard-container {
             padding: 20px;
