@@ -17,7 +17,7 @@ const Dashboard = () => {
     document.title = 'Dashboard Pendaftar';
 
     axios
-      .get('http://localhost:5007/api/v1/pendaftar', {
+      .get('hhttps://dani.rikpetik.site/api/v1/pendaftar', {
         withCredentials: true,
       })
       .then((response) => {
