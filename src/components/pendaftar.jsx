@@ -11,7 +11,7 @@ const PendaftarList = () => {
 
   const getPendaftar = async () => {
     try {
-      const res = await axios.get('http://localhost:5007/api/v1/pendaftar');
+      const res = await axios.get('hhttps://dani.rikpetik.site/api/v1/pendaftar');
       setPendaftar(res.data);
     } catch (err) {
       console.error("Gagal mengambil data pendaftar:", err);
@@ -23,7 +23,7 @@ const PendaftarList = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await axios.delete(`http://localhost:5007/api/v1/pendaftar/${id}`);
+      const res = await axios.delete(`hhttps://dani.rikpetik.site/api/v1/pendaftar/${id}`);
       if (res.status === 204) {
         setPendaftar(prevPendaftar => prevPendaftar.filter(p => p.id !== id));
         alert("Data berhasil dihapus!");

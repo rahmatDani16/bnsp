@@ -79,7 +79,7 @@ const TambahPendaftar = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5007/api/v1/pendaftar",
+        "https://dani.rikpetik.site/api/v1/pendaftar",
         formData
       );
       if (response.status === 201) {

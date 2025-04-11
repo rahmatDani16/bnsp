@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const fetchDataUser = async () => {
     try {
-      const res = await axios.get("http://localhost:5007/api/v1/pendaftar");
+      const res = await axios.get("https://dani.rikpetik.site/api/v1/pendaftar");
       const fetched = Array.isArray(res.data) ? res.data : res.data.data || [];
       setDataUser(fetched);
     } catch (err) {
@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   const handleEdit = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:5007/api/v1/pendaftar/${id}`);
+      const res = await axios.get(`https://dani.rikpetik.site/api/v1/pendaftar/${id}`);
       setFormData(res.data.data);
       setEditId(id);
       setEditMode(true);
@@ -46,7 +46,7 @@ const Dashboard = () => {
     const konfirmasi = window.confirm("Yakin ingin menghapus data?");
     if (!konfirmasi) return;
     try {
-      await axios.delete(`http://localhost:5007/api/v1/pendaftar/${id}`);
+      await axios.delete(`https://dani.rikpetik.site/api/v1/pendaftar/${id}`);
       fetchDataUser();
     } catch (err) {
       console.error("Gagal menghapus data:", err);
@@ -64,7 +64,7 @@ const Dashboard = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5007/api/v1/pendaftar/${editId}`, formData);
+      await axios.put(`https://dani.rikpetik.site/api/v1/pendaftar/${editId}`, formData);
       alert("Data berhasil diperbarui");
       setEditMode(false);
       setEditId(null);
